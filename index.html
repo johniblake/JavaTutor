@@ -41,6 +41,48 @@
 				width: 100%;
         height: 200px;
 	    }
+			#java_editor_03_1 {
+				float:left;
+	      position: relative;
+				width: 100%;
+        height: 330px;
+	    }
+			#java_editor_04 {
+				float:left;
+	      position: relative;
+				width: 50%;
+        height: 200px;
+	    }
+			#python_editor_04 {
+				float:left;
+	      position: relative;
+				width: 50%;
+        height: 200px;
+	    }
+			#java_editor_05 {
+				float:left;
+	      position: relative;
+				width: 100%;
+        height: 250px;
+	    }
+			#java_editor_06 {
+				float:left;
+	      position: relative;
+				width: 100%;
+        height: 250px;
+	    }
+			#java_editor_07 {
+				float:left;
+	      position: relative;
+				width: 50%;
+        height: 200px;
+	    }
+			#python_editor_07 {
+				float:left;
+	      position: relative;
+				width: 50%;
+        height: 200px;
+	    }
 		</style>
 
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -159,31 +201,7 @@
 							<p>
 								An important datatype in java is the array. Declaring an array of integers looks like the following:
 							</p>
-							<section class="box text-style1">
-								<div class="inner">
-									<p>
-										// declares an array of integers<br>
-										int[] anArray;<br>
-										<br>
-										// allocates memory for 10 integers<br>
-										anArray = new int[10];<br>
-										<br>
-										// initialize first element<br>
-										anArray[0] = 100;<br>
-										// initialize second element<br>
-										anArray[1] = 200;<br>
-										// and so forth<br>
-										anArray[2] = 300;<br>
-										anArray[3] = 400;<br>
-										anArray[4] = 500;<br>
-										anArray[5] = 600;<br>
-										anArray[6] = 700;<br>
-										anArray[7] = 800;<br>
-										anArray[8] = 900;<br>
-										anArray[9] = 1000;<br>
-									</p>
-								</div>
-							</section>
+							<div id = "java_editor_03_1"></div>
 							<p>
 								What do you think the output would be if we decided to print anArray[7]?
 							</p>
@@ -205,15 +223,43 @@
 							<p>
 								Now, say I want to loop over an array and manipulate its elements. How would I do that? For Loops are the answer! For Loops in Java behave the same as they do in Python but require slightly different syntax. Observe the following side-by-side Python and Java code:
 							</p>
-							<a href="#" class="image featured"><img src="example_images/example_03.png" alt="" /></a>
-						</article>
-						<article class="box post post-excerpt">
-							<header>
-								<h2><a href="#">Creating Objects and Type Declaration:</a></h2>
-							</header>
-						</article>
+							<div id = "python_editor_04"></div>
+							<div id = "java_editor_04"></div>
+							<p>
+								You may notice the curly braces at the start and end of the for loop in Java. This is the equivalent to an indent in Python and can be seen around the code inside a class and method in Java as well. The end curly brace on the signals to the compiler that the "indented section" is over, just as the beginning curly brace signals its beginning.
+							</p>
+							<p>
+								So, how would one loop over an array in Java? The sample code below prints out the strings stored at each index of the array. See if you can figure out how it works:
+							</p>
+							<div id="java_editor_05"></div>
+							<p>
+								What would the output be if the code were adjusted to read:
+							</p>
 
+							<p>
+								    for (i = 0; i < 3; i++){
+							</p>
+							<p>
+								in line 7?
+							</p>
 
+								[response]
+							<p>
+								What will be the printed output of the following program?
+							</p>
+
+							<div id="java_editor_06"></div>
+
+								[response]
+							<p>
+								From the first example, what if we only want to print the elements in the odd indices of the array? Just as in Python, we need the conditional "if" statement to do that.
+							</p>
+							<div id="python_editor_07"></div>
+							<div id="java_editor_07"></div>
+							<p>
+								Write a program called OneEvenSum.java that is exactly the same as you wrote for part one, but uses the conditional "if" to add only the elements of the array who's indices are divisible by 2. This program should print the resulting integer as output.
+							</p>
+						</article>
 
 					<!-- Pagination -->
 						<div class="pagination">
@@ -284,10 +330,24 @@
 				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_01/HelloWorld.java","java_editor_01"]);
 				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_02/HelloWorld2.java","java_editor_02"]);
 				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_03/intSum.java","java_editor_03"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_03_1/Arrays.java","java_editor_03_1"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_04/forLoop.py","python_editor_04"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_04/ForLoop.java","java_editor_04"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_05/ArrayIterator.java","java_editor_05"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_06/ArraySum.java","java_editor_06"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_07/ifExample.py","python_editor_07"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_07/IfExample.java","java_editor_07"]);
 				setEditor.init(["java_editor_01","java"]);
 				setEditor.init(["python_editor_01","python"]);
 				setEditor.init(["java_editor_02","java"]);
 				setEditor.init(["java_editor_03","java"]);
+				setEditor.init(["java_editor_03_1","java"]);
+				setEditor.init(["java_editor_04","java"]);
+				setEditor.init(["python_editor_04","python"]);
+				setEditor.init(["java_editor_05","java"]);
+				setEditor.init(["java_editor_06","java"]);
+				setEditor.init(["java_editor_07","java"]);
+				setEditor.init(["python_editor_07","python"]);
 			</script>
 
 	</body>
