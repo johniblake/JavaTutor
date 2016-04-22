@@ -29,6 +29,12 @@
 				width: 50%;
         height: 200px;
 	    }
+			#python_editor_02 {
+				float:left;
+	      position: relative;
+				width: 100%;
+        height: 275px;
+	    }
 			#java_editor_02 {
 				float:left;
 	      position: relative;
@@ -75,13 +81,25 @@
 				float:left;
 	      position: relative;
 				width: 50%;
-        height: 200px;
+        height: 275px;
 	    }
 			#python_editor_07 {
 				float:left;
 	      position: relative;
 				width: 50%;
-        height: 200px;
+        height: 275px;
+	    }
+			#python_editor_02_1 {
+				float:left;
+	      position: relative;
+				width: 50%;
+        height: 290px;
+	    }
+			#java_editor_08 {
+				float:left;
+	      position: relative;
+				width: 50%;
+        height: 290px;
 	    }
 		</style>
 
@@ -260,6 +278,24 @@
 								Write a program called OneEvenSum.java that is exactly the same as you wrote for part one, but uses the conditional "if" to add only the elements of the array who's indices are divisible by 2. This program should print the resulting integer as output.
 							</p>
 						</article>
+						<article class="box post post-excerpt">
+							<header>
+								<h2><a href="#">Classes, Objects, Class Methods & Variables:</a></h2>
+							</header>
+							<p>
+								In this section we demonstrate how to write Class Objects in Java as you learned to do in Python. Recall that in Python, classes are constructed like so:
+							</p>
+							<div id="python_editor_02"></div>
+							<p>
+								In this example, the class is called Person and it has the class variable s. The constructor requires the parameter 'h'. In the constructor, the 'height' variable of the Person object is set to be the value of the parameter h. 'Person' has one function, namely, 'printHeight', which prints the height of the Person object. In the main function we 'instantiate' a Person object called 'guy' with a height of 5 and then print the height of 'guy' using printHeight(). Here is the equivalent code in Java side by side with the python code:
+							</p>
+							<div id="python_editor_02_1"></div>
+							<div id="java_editor_08"></div>
+							<p>
+								There are a few key differences to note right away.
+							</p>
+
+						</article>
 
 					<!-- Pagination -->
 						<div class="pagination">
@@ -282,6 +318,7 @@
 			<div id="sidebar">
 
 				<!-- Logo -->
+				<div id="sidebaritems">
 					<h1 id="logo"><a href="#">Sections</a></h1>
 
 				<!-- Nav -->
@@ -300,17 +337,7 @@
 							<input type="text" class="text" name="search" placeholder="Search" />
 						</form>
 					</section>
-
-				<!-- Text -->
-					<section class="box text-style1">
-						<div class="inner">
-							<p>
-								<strong>Striped:</strong> A free and fully responsive HTML5 site
-								template designed by <a href="http://n33.co/">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a>
-							</p>
-						</div>
-					</section>
-
+				</div>
 
 				<!-- Copyright -->
 					<ul id="copyright">
@@ -318,6 +345,28 @@
 					</ul>
 
 			</div>
+			<script>
+				$(function() {
+
+						var $sidebaritems   = $("#sidebaritems"),
+								$window    = $(window),
+								offset     = $sidebaritems.offset(),
+								topPadding = 40;
+
+						$window.scroll(function() {
+								if ($window.scrollTop() >= offset.top) {
+										$sidebaritems.stop().animate({
+												marginTop: $window.scrollTop() - offset.top + topPadding
+										});
+								} else {
+										$sidebaritems.stop().animate({
+												marginTop: 0
+										});
+								}
+						});
+
+				});
+			</script>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -337,6 +386,9 @@
 				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_06/ArraySum.java","java_editor_06"]);
 				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_07/ifExample.py","python_editor_07"]);
 				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_07/IfExample.java","java_editor_07"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_02/person.py","python_editor_02"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_02/person.py","python_editor_02_1"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_08/Person.java","java_editor_08"]);
 				setEditor.init(["java_editor_01","java"]);
 				setEditor.init(["python_editor_01","python"]);
 				setEditor.init(["java_editor_02","java"]);
@@ -348,6 +400,9 @@
 				setEditor.init(["java_editor_06","java"]);
 				setEditor.init(["java_editor_07","java"]);
 				setEditor.init(["python_editor_07","python"]);
+				setEditor.init(["python_editor_02","python"]);
+				setEditor.init(["python_editor_02_1","python"]);
+				setEditor.init(["java_editor_08","java"]);
 			</script>
 
 	</body>
