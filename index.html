@@ -21,8 +21,8 @@
 
 				init: function () {
 					$.ajax({
-						url: "http://introcs.cs.princeton.edu/python/11hello/helloworld.py",
-						type: "text",
+						url: "https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_01/HelloWorld.java",
+						dataType: "text",
 						async: false,
 						success: function (data){
 							pageExecute.fileContents = data;
