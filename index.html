@@ -107,6 +107,18 @@
 				width: 100%;
         height: 250px;
 	    }
+			#java_editor_10 {
+				float:left;
+	      position: relative;
+				width: 100%;
+        height: 250px;
+	    }
+			#java_editor_11 {
+				float:left;
+	      position: relative;
+				width: 100%;
+        height: 250px;
+	    }
 		</style>
 
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -316,6 +328,23 @@
 								Here is some example code for creating a new Person object:
 							</p>
 							<div id="java_editor_09"></div>
+							<p>
+								This code creates a Person object named "guy" with a height of 5.
+							</p>
+							<p>
+								Instance variables and methods are accessed via created objects. To access an instance variable the fully qualified path should be as follows:
+							</p>
+							<div id="java_editor_10"></div>
+							<p>
+							This example explains how to access instance variables and methods of a class:
+							</p>
+							<div id ="java_editor_11"></div>
+							<p>
+								If we compile and run the program above, the its output would be:<br>
+								<br>
+								Person's name is: Gob
+								Person's height is: 5
+							</p>
 
 						</article>
 
@@ -412,6 +441,8 @@
 				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_02/person.py","python_editor_02_1"]);
 				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_08/Person.java","java_editor_08"]);
 				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_09/Person.java","java_editor_09"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_10/Instance.java","java_editor_10"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_11/Person.java","java_editor_11"]);
 				setEditor.init(["java_editor_01","java"]);
 				setEditor.init(["python_editor_01","python"]);
 				setEditor.init(["java_editor_02","java"]);
@@ -427,6 +458,8 @@
 				setEditor.init(["python_editor_02_1","python"]);
 				setEditor.init(["java_editor_08","java"]);
 				setEditor.init(["java_editor_09","java"]);
+				setEditor.init(["java_editor_10","java"]);
+				setEditor.init(["java_editor_11","java"]);
 
 			</script>
 
