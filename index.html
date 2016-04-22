@@ -12,38 +12,33 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script type ="text/javascript">
-			var pageExecute = {
-
-				fileContents:"Null",
-				pagePrefix:"Null",
-				slides:"Null",
-
-				init: function () {
-					$.ajax({
-						url: "https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_01/helloWorld.py",
-						dataType: "text",
-						async: false,
-						success: function (data){
-							pageExecute.fileContents = data;
-						}
-					});
-				}
-			};
-			pageExecute.init();
-		</script>
+		<script src="assets/ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+		<script type ="text/javascript" src="assets/js/getfilecontents.js"></script>
+		<script type ="text/javascript" src ="assets/js/seteditor.js"></script>
 
 		<style type="text/css" media="screen">
-	    #java_editor {
+	    #java_editor_01 {
 				float:left;
 	      position: relative;
 				width: 50%;
         height: 200px;
 	    }
-			#python_editor {
+			#python_editor_01 {
 				float:left;
 	      position: relative;
 				width: 50%;
+        height: 200px;
+	    }
+			#java_editor_02 {
+				float:left;
+	      position: relative;
+				width: 100%;
+        height: 230px;
+	    }
+			#java_editor_03 {
+				float:left;
+	      position: relative;
+				width: 100%;
         height: 200px;
 	    }
 		</style>
@@ -73,29 +68,11 @@
 							<p>
 								 Observe the following "Hello, World!" programs in both Python and Java.
 							</p>
-							<div id="python_editor">
+							<div id="python_editor_01">
 							</div>
 
-							<div id="java_editor">
+							<div id="java_editor_01">
 							</div>
-							<script src="assets/ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-							<script>
-							    var editor = ace.edit("java_editor");
-							    editor.setTheme("ace/theme/github");
-									//editor.setValue(); // or session.setValue
-							    editor.getSession().setMode("ace/mode/java");
-									editor.getSession().setUseWrapMode(true);
-
-							</script>
-							<script>
-							    var editor = ace.edit("python_editor");
-							    editor.setTheme("ace/theme/github");
-									//editor.setValue(); // or session.setValue
-							    editor.getSession().setMode("ace/mode/python");
-									editor.getSession().setUseWrapMode(true);
-
-							</script>
-							<a href="#" class="image featured"><img src="example_images/example_01.png" alt="" /></a>
 							<p>
 								It is clear right away that there are some differences between the two. For one, Java requires a bit more code to run than Python does. Don't worry, this code will make sense soon enough.
 							</p>
@@ -108,7 +85,8 @@
 							<p>
 								Now, you'll notice the main method in the helloWorld.java program takes the argument "String[] args". This means that if you want, you can specify arguments to give the program upon running it, and it will interpret them as a list of strings. For example: "java helloWorld test1 test2" would give the main method the list ["test1","test2"] stored in the variable Args. Since we haven't told the main method how to handle any arguments, this will not change how the program runs. But suppose we modified the code to look like the following:
 							</p>
-							<a href="#" class="image featured"><img src="example_images/example_02.png" alt="" /></a>
+							<div id="java_editor_02">
+							</div>
 							<p>
 								This program requires that one argument be entered after "java HelloWorld". Suppose that you entered the world "Bob" as your argument, what would the output look like?
 							</p>
@@ -153,8 +131,7 @@
 						<p>
 							Check 1: The following program should add two integers a and b and print the outcome. Fill in the empty or incomplete lines so that it does so.
 						</p>
-						<a href="#" class="image featured"><img src="example_images/example_03.png" alt="" /></a>
-
+						<div id = "java_editor_03"></div>
 						<p>
 							Line 6:
 						</p>
@@ -288,93 +265,6 @@
 						</div>
 					</section>
 
-				<!-- Recent Posts -->
-					<section class="box recent-posts">
-						<header>
-							<h2>Recent Posts</h2>
-						</header>
-						<ul>
-							<li><a href="#">Lorem ipsum dolor</a></li>
-							<li><a href="#">Feugiat nisl aliquam</a></li>
-							<li><a href="#">Sed dolore magna</a></li>
-							<li><a href="#">Malesuada commodo</a></li>
-							<li><a href="#">Ipsum metus nullam</a></li>
-						</ul>
-					</section>
-
-				<!-- Recent Comments -->
-					<section class="box recent-comments">
-						<header>
-							<h2>Recent Comments</h2>
-						</header>
-						<ul>
-							<li>case on <a href="#">Lorem ipsum dolor</a></li>
-							<li>molly on <a href="#">Sed dolore magna</a></li>
-							<li>case on <a href="#">Sed dolore magna</a></li>
-						</ul>
-					</section>
-
-				<!-- Calendar -->
-					<section class="box calendar">
-						<div class="inner">
-							<table>
-								<caption>July 2014</caption>
-								<thead>
-									<tr>
-										<th scope="col" title="Monday">M</th>
-										<th scope="col" title="Tuesday">T</th>
-										<th scope="col" title="Wednesday">W</th>
-										<th scope="col" title="Thursday">T</th>
-										<th scope="col" title="Friday">F</th>
-										<th scope="col" title="Saturday">S</th>
-										<th scope="col" title="Sunday">S</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td colspan="4" class="pad"><span>&nbsp;</span></td>
-										<td><span>1</span></td>
-										<td><span>2</span></td>
-										<td><span>3</span></td>
-									</tr>
-									<tr>
-										<td><span>4</span></td>
-										<td><span>5</span></td>
-										<td><a href="#">6</a></td>
-										<td><span>7</span></td>
-										<td><span>8</span></td>
-										<td><span>9</span></td>
-										<td><a href="#">10</a></td>
-									</tr>
-									<tr>
-										<td><span>11</span></td>
-										<td><span>12</span></td>
-										<td><span>13</span></td>
-										<td class="today"><a href="#">14</a></td>
-										<td><span>15</span></td>
-										<td><span>16</span></td>
-										<td><span>17</span></td>
-									</tr>
-									<tr>
-										<td><span>18</span></td>
-										<td><span>19</span></td>
-										<td><span>20</span></td>
-										<td><span>21</span></td>
-										<td><span>22</span></td>
-										<td><a href="#">23</a></td>
-										<td><span>24</span></td>
-									</tr>
-									<tr>
-										<td><a href="#">25</a></td>
-										<td><span>26</span></td>
-										<td><span>27</span></td>
-										<td><span>28</span></td>
-										<td class="pad" colspan="3"><span>&nbsp;</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</section>
 
 				<!-- Copyright -->
 					<ul id="copyright">
@@ -389,6 +279,16 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_01/helloWorld.py","python_editor_01"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_01/HelloWorld.java","java_editor_01"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_02/HelloWorld2.java","java_editor_02"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_03/intSum.java","java_editor_03"]);
+				setEditor.init(["java_editor_01","java"]);
+				setEditor.init(["python_editor_01","python"]);
+				setEditor.init(["java_editor_02","java"]);
+				setEditor.init(["java_editor_03","java"]);
+			</script>
 
 	</body>
 </html>
