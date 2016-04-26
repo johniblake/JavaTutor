@@ -107,13 +107,13 @@ For simplicity's sake we will use ArrayLists throughout the rest of the tutorial
 
 For Loops:
 
-Now, say I want to loop over an array and manipulate its elements. How would I do that? For Loops are the answer! For Loops in Java behave the same as they do in Python but require slightly different syntax.
+Now, say I want to loop over an arrayList and manipulate its elements. How would I do that? For Loops are the answer! For Loops in Java behave the same as they do in Python but require slightly different syntax.
 
 [side by side comparison of python and Java for loops][java example_04][python example_04]
 
 You may notice the curly braces at the start and end of the for loop in Java. This is the equivalent to an indent in Python and can be seen around the code inside a class and method in Java as well. The end curly brace on the signals to the compiler that the "indented section" is over, just as the beginning curly brace signals its beginning.
 
-So, how would one loop over an array in Java? The sample code below prints out the strings stored at each index of the array. See if you can figure out how it works:
+So, how would one loop over an arrayList in Java? The sample code below prints out the strings stored at each index of the array. See if you can figure out how it works:
 
 [java example_05]
 
