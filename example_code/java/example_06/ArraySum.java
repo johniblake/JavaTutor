@@ -1,13 +1,21 @@
-public class ArraySum {
+//ArraySum.java
+import java.util.*;
+public class ArraySum{
 
     public static void main(String[] args) {
-
-        int[] array = {1,1,1,1,1,1,1,1,1,1}
-        int j = 0;
+        //instantiate an ArrayList called "array"
+        ArrayList<Integer> array = new ArrayList<Integer>();
+        int k = 0;
+        //populate array with 10 1's
         for (int i = 0; i < 10; i++){
-          j += array[i];
+          array.add(1);
         }
-        System.out.println(j);
+        //add each item to the value stored in k
+        for (int j = 0; j < 10; j++){
+          k += array.get(j);
+        }
+        //print the output
+        System.out.println(k);
     }
 
 }

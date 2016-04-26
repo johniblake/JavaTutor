@@ -1,13 +1,20 @@
+//ArrayIterator.java
+import java.util.*;
 public class ArrayIterator {
 
     public static void main(String[] args) {
-
-        int[] array = {1,3,5,7,9,11,13,15,17,19}
-        int j = 0;
+        //instantiate an ArrayList called "array"
+        ArrayList<Integer> array = new ArrayList<Integer>();
+        int k = 0;
+        //populate array with 10 1's
         for (int i = 0; i < 10; i++){
-          j = array[i];
+          array.add(1);
         }
-        System.out.println(j);
+        //print out each item of array
+        for (int j = 0; j < 10; j++){
+          k = array.get(j);
+          System.out.println(k);
+        }
     }
 
 }

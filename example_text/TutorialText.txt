@@ -99,6 +99,12 @@ What if I wanted to create an array of 10 Strings called stringArray? Enter this
 
 [response]
 
+ArrayLists:
+
+Arrays in Java have some limitations. Namely, they require users to declare their size upon instantiation, or to instantiate them with a given list of items. An array's size in Java is not dynamic like in Python, so they cannot resize themselves when necessary. Java's ArrayList object solves this problem. Read about ArrayLists and how to instantiate them here: http://www.tutorialspoint.com/java/java_arraylist_class.htm
+
+For simplicity's sake we will use ArrayLists throughout the rest of the tutorial.
+
 For Loops:
 
 Now, say I want to loop over an array and manipulate its elements. How would I do that? For Loops are the answer! For Loops in Java behave the same as they do in Python but require slightly different syntax.
@@ -140,7 +146,7 @@ Bringing it All Together:
 
   Introduce Class Objects through a worked exercise that creates a number of "Person" objects with the class variable height. Use this to introduce the idea of the constructor and its syntax. Then add to the "Person" class methods for getting the height of the person. Discuss return types and visibility here? Problems should include properly setting and getting the height of a specific person object, and finding the average height of a group of "Person" objects.
 
-  In this section we demonstrate how to write Class Objects in Java as you learned to do in Python. Recall that in Python, classes are constructed like so:
+  In this section we demonstrate how to write Classes and  Objects in Java as you learned to do in Python. Recall that in Python, classes are constructed like so:
 
   [Python example_02]
 
