@@ -400,35 +400,32 @@
 							Has-A relationship?
 
 
-						It is important to note that the only possible way to access an object is through a reference variable. A reference variable can be of only one type. Once declared, the type of a reference variable cannot be changed. However, the reference vairable can be reassinged to access another object given that that object is of the same type or a subtype of its declared type.
+						It is important to note that the only possible way to access an object (Parent) is through a reference variable (mom). A reference variable can be of only one type (in this case Parent). Once declared, the type of a reference variable cannot be changed. However, the reference variable can be reassinged to access another object given that that object is of the same type or a subtype of its declared type.
+
+						Write a program called Child.java, where Child is a subclass of Person. Give Child some attributes and methods
 
 						Interfaces:
 
-						An interface is another reference type in Java. Similar to class, it is a collection of abstract methods. A class "implements" an interface in order to inherit the abstract methods of the interface. 
+						An interface is another reference type in Java. Similar to class, it is a collection of abstract methods. A class "implements" an interface in order to inherit the abstract methods of the interface.
 
-						Writing an interface is similar to writing a class. But a class describes the attributes and behaviours of an object. And an interface contains behaviours that a class implements.
+						An interface looks like this:
 
-						Unless the class that implements the interface is abstract, all the methods of the interface need to be defined in the class.
+						[java example_16]
 
+						Writing an interface is similar to writing a class. A class describes the attributes and behaviours of an object. An interface just describes behaviours (methods) that a class implements.
 
+						Think of an interface like a contract. If a class implements an interface, all the methods of the interface need to be defined in the class. If they are not, the class must be declared abstract. More on this here: http://www.tutorialspoint.com/java/java_abstraction.htm
 
+						The following code shows the interface Pet, and its implementation by the class Dog.
 
+						[example_17 Pet.java]
+						[example_17 Dog.java]
 
+						The Output of this example will be:
 
+						You have fed your dog.
+						You ware playing fetch with your dog.
 
-
-
-
-
-
-
-
-
-
-
-
-
-							Talk about the conceptual need for interfaces, show an interface and a class that implements it. Prompt students to write a class that implements a simple provided interface. Introduce the concept of polymorphism and ask students questions about why interfaces are necessary and how they help to uphold the principles of polymorphism. Introduce subclasses and have student write classes that implement simple classes and override certain methods. Exercises and examples should include test code like this http://beginnersbook.com/2014/01/method-overriding-in-java-with-example/ and ask students to answer questions about output, or in some places fill in missing code.
 						</article>
 
 					<!-- Pagination -->
